@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="factoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="empresa">
+    <Key>
+      <PropertyRef Name="emp_id" />
+    </Key>
+    <Property Name="emp_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="emp_tipid" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="emp_numid" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="emp_nom" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="emp_dir" Type="varchar" MaxLength="80" />
+    <Property Name="emp_ciu" Type="varchar" MaxLength="20" />
+    <Property Name="emp_depto" Type="varchar" MaxLength="20" />
+    <Property Name="emp_tel" Type="varchar" MaxLength="20" />
+    <Property Name="emp_tel2" Type="varchar" MaxLength="20" />
+    <Property Name="emp_tel3" Type="varchar" MaxLength="20" />
+    <Property Name="emp_email" Type="varchar" MaxLength="30" />
+    <Property Name="emp_web" Type="varchar" MaxLength="30" />
+    <Property Name="emp_rlegal" Type="varchar" MaxLength="30" />
+    <Property Name="emp_fconstit" Type="date" />
+    <Property Name="emp_fregistro" Type="date" />
+  </EntityType>
+  <EntityContainer Name="factoModelStoreContainer">
+    <EntitySet Name="empresa" EntityType="Self.empresa" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

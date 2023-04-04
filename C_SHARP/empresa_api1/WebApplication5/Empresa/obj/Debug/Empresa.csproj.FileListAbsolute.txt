@@ -1,0 +1,14 @@
+C:\Users\usuario\source\repos\WebApplication5\Empresa\bin\Debug\Empresa.exe.config
+C:\Users\usuario\source\repos\WebApplication5\Empresa\bin\Debug\Empresa.exe
+C:\Users\usuario\source\repos\WebApplication5\Empresa\bin\Debug\Empresa.pdb
+C:\Users\usuario\source\repos\WebApplication5\Empresa\bin\Debug\Newtonsoft.Json.dll
+C:\Users\usuario\source\repos\WebApplication5\Empresa\bin\Debug\Newtonsoft.Json.xml
+C:\Users\usuario\source\repos\WebApplication5\Empresa\obj\Debug\Empresa.csproj.AssemblyReference.cache
+C:\Users\usuario\source\repos\WebApplication5\Empresa\obj\Debug\Empresa.csproj.SuggestedBindingRedirects.cache
+C:\Users\usuario\source\repos\WebApplication5\Empresa\obj\Debug\Empresa.tbtipid.resources
+C:\Users\usuario\source\repos\WebApplication5\Empresa\obj\Debug\Empresa.Properties.Resources.resources
+C:\Users\usuario\source\repos\WebApplication5\Empresa\obj\Debug\Empresa.csproj.GenerateResource.cache
+C:\Users\usuario\source\repos\WebApplication5\Empresa\obj\Debug\Empresa.csproj.CoreCompileInputs.cache
+C:\Users\usuario\source\repos\WebApplication5\Empresa\obj\Debug\Empresa.csproj.CopyComplete
+C:\Users\usuario\source\repos\WebApplication5\Empresa\obj\Debug\Empresa.exe
+C:\Users\usuario\source\repos\WebApplication5\Empresa\obj\Debug\Empresa.pdb

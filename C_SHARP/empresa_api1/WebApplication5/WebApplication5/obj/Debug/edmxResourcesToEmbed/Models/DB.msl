@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="factoModelStoreContainer" CdmEntityContainer="factoEntities">
+    <EntitySetMapping Name="empresa">
+      <EntityTypeMapping TypeName="factoModel.empresa">
+        <MappingFragment StoreEntitySet="empresa">
+          <ScalarProperty Name="emp_id" ColumnName="emp_id" />
+          <ScalarProperty Name="emp_tipid" ColumnName="emp_tipid" />
+          <ScalarProperty Name="emp_numid" ColumnName="emp_numid" />
+          <ScalarProperty Name="emp_nom" ColumnName="emp_nom" />
+          <ScalarProperty Name="emp_dir" ColumnName="emp_dir" />
+          <ScalarProperty Name="emp_ciu" ColumnName="emp_ciu" />
+          <ScalarProperty Name="emp_depto" ColumnName="emp_depto" />
+          <ScalarProperty Name="emp_tel" ColumnName="emp_tel" />
+          <ScalarProperty Name="emp_tel2" ColumnName="emp_tel2" />
+          <ScalarProperty Name="emp_tel3" ColumnName="emp_tel3" />
+          <ScalarProperty Name="emp_email" ColumnName="emp_email" />
+          <ScalarProperty Name="emp_web" ColumnName="emp_web" />
+          <ScalarProperty Name="emp_rlegal" ColumnName="emp_rlegal" />
+          <ScalarProperty Name="emp_fconstit" ColumnName="emp_fconstit" />
+          <ScalarProperty Name="emp_fregistro" ColumnName="emp_fregistro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

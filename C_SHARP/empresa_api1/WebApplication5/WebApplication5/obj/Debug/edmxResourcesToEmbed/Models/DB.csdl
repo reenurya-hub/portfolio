@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="factoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="empresa">
+    <Key>
+      <PropertyRef Name="emp_id" />
+    </Key>
+    <Property Name="emp_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="emp_tipid" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="emp_numid" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="emp_nom" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="emp_dir" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="emp_ciu" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="emp_depto" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="emp_tel" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="emp_tel2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="emp_tel3" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="emp_email" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="emp_web" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="emp_rlegal" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="emp_fconstit" Type="DateTime" Precision="0" />
+    <Property Name="emp_fregistro" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityContainer Name="factoEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="empresa" EntityType="Self.empresa" />
+  </EntityContainer>
+</Schema>
