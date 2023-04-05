@@ -1,0 +1,266 @@
+ORACLE
+======
+En Oracle hay dos tipos de arquitectura:
+
+- La arquitectura stand-alone
+donde puede haber más de una instancia y más de una base de datos.
+
+- La arquitectura RAC (Real Application Cluster)
+Donde hay múltiples instancias atacando a la misma base de datos.
+
+INSTANCIA
+=========
+La instancia y la base de datos no es lo mismo.
+La instancia se compone del SGA (System Global Area) y
+los procesos (ej: PBWn, CKPt, LGWR, PMON, SMON, ARCn, etc).
+
+BASE DE DATOS
+=============
+La base de datos se compone de:
+	- Archivo de datos
+	- Archivo de control
+	- Archivos Redo Log
+    - Archivos de backup, de parámetros, contraseñas, trazas, alertas,
+      históricos redo log no son parte de la BD pero son necesarios para
+	  trabajar con la base de datos.
+
+SGA (System Global Area)
+===
+La SGA se compone de:
+	- Cache búferes de datos.
+	- Cache Redo Log (Recuperación ante fallo catastrófico).
+	- Shared Pool
+	- Java Pool
+	- Streams Pool
+	- Large Pool
+
+USUARIO: 
+=======
+El usuario hace uso de un software que se conecta a la BASE DE DATOS
+mediente un PROCESO DE USUARIO que a su vez se vale del LISTENER para 
+realizar un PROCESO SERVIDOR.
+
+Proceso DBWn:
+Almacena datos desde la cache de datos hasta los archivos de datos.
+
+Proceso CKPT:
+Desde el proceso hasta archivos de datos y archivos de control.
+
+Proceso LGWR:
+Trabaja desde la cache Redo Log hasta los archivos Redo Log.
+
+Proceso ARCn:
+Trabaja con los archivos Redo Log y con los históricos Redo Log
+
+Proceso de usuario:
+ - En el cliente
+
+Proceso servidor:
+ - En el servidor
+ - Uno por cada conexión.
+
+Conexión:
+ - Conecta proceso cliente con proceso servidor.
+ - Establece la comunicación entre cliente y servidor pero
+ solo abarga lo que ocurre entre el proceso de usuario y el proceso
+ servidor.
+
+Sesión:
+ - Abarca desde el propio cliente hasta la propia base de datos.
+ - Contiene datos de usuario.
+ - La misma conexión puede establecer varias sesiones.
+ - Visibles desde V$SESSION.
+
+MODOS DE CONEXIÓN.
+=================
+Modo dedicado:
+ - A cada proceso de usuario le atiende un proceso servidor.
+ - Los dato de usuario se almacenan en la PGA (memoria de usuario).
+
+Modo compartido:
+ - Cada proceso servidor atiende a varios procesos usuarios
+ - Hay datos de usuario que se almacenan en la SGA (memoria global).
+
+PGA: Se componen de espacio de pila y UGA (User Global Area).
+SGA: También incluyen su UGA.
+
+Datos comunes : SGA
+Datos privados : UGA.
+
+
+Gestion de la memoria en PGA:
+=============================
+Cada proceso de usuario accede a la base de datos mediante
+un proceso servidor y en la PGA (Personal Global Area) se incluye:
+   - Area de trabajo SQL.
+   - Memoria de sesión
+   - Área privada SQL.
+
+Gestion de la memoria en SGA:
+=============================
+Pool Compartido (Shared Pool):
+	Caché de biblioteca (Area Compartida SQL, Area privada SQL)
+	Caché de DD, Caché de resultados, Área fija, Otros
+
+Caché de Búferes de BD
+	Pool de búferes KEEP
+	Pool de búferes RECYCLE
+	Pool de búferes nK
+
+Búfer de Redo Log
+
+Pool Largo
+	Buffer E/S
+	Consulta paralela
+	Memoria Libre
+	Advanced Queuing
+	Cola de respuestas
+	Cola de particiones
+
+En la SGA están todos los datos posibles para usuarios
+
+ESTRUCTURA DE LA PGA:
+=====================
+	- Almacena los datos de la sesión
+		Espacio de pila
+		UGA
+El espacio de pila siempre se guarda en la PGA
+La UGA en modo de servidor compartido se guarda en la SGA
+
+UGA que contiene:
+=================
+	- Área de trabajo SQL. cacheada para acelerar ejecución instrucciones
+	SQL.
+	- Memoria de sesión. Datos de la sesión
+	- Área privada SQL.
+		- datos sobre las consultas.
+		- cursor. Estructura que permita al cliente ir volcando
+			los resultados de una instrucción.
+
+SGA
+	Pool compartido:
+		Cachear instrucciones SQL y PL/SQL que se permite que 
+		instrucciones repetidas se ejecuten más rápido.
+
+	Se compone de 
+		Cache de biblioteca
+			Area SQL compartida
+			Area SQL privada
+		Caché de Diccionario de Datos
+		Cache de resultados
+
+
+
+
+CACHE DE BUFERES DE DATOS
+=========================
+- Almacena los últimos datos utilizados por los procesos
+- minimiza el uso de los discos.
+- Se compone de bloques de datos.
+- cuando se modifica un dato se modifica aquí y no en el disco.
+- cada cierto tiempo los datos modificados en la cache se graban en disco (checkpoint).
+
+
+Al inicio la caché de búferes de datos tiene buferes sin uso
+en blanco
+
+Los datos se ocupan al hacer uso de los archivos de datos
+esos buferes son buferes limpios.
+
+AL modificar lso datos se modifica los datos en memoria
+esos se llaman buferes sucios.
+
+Cuando los buferes sucios dejan de estarlo? cuando
+hay checkpoint mediante DataBase Writer (DBWn proceso).
+
+Estados de los búferes:
+	- Sin uso
+	- Limpios (datos útiles)
+	- Sucios (datos modificados)
+	- Pinned (ocupados por un proceso).
+	- Libres (Ningún proceso los está utilizando)
+
+BUFER REDO Log
+==============
+- Se graban los datos para realiza instrucciones DDL o DML confirmadas
+- Se usan en caso de desastres
+- Es un bufer circular los ultimos sobrescriben lso primeros
+- Continuamente se graban a disco
+
+
+Otros pool:
+Pool de Java
+	- Para trabajos con java.
+Pool de streams
+	- para Oracle Streams
+
+ESTRUCTURA FISICO LÓGICA DE ORACLE
+==================================
+ARCHIVOS DE DATOS Y BLOQUES DE S.O.
+TABLESPACES SE RELACIONA CON ARCHIVOS DE DATOS.
+LOS TABLESPACES SE DIVIDEN EN SEGMENTOS
+LOS SEGMENTOS SE DIVIDEN EN EXTENSIONES
+LAS EXTENSIONES SE DIVIDEN EN BLOQUES DE DATOS
+
+ESTRUCTURA LÓGICA
+================
+TABLAS
+LAS TABLAS PERTENECEN A UN SOLO TABLESPACES PERO UN TABLESPACES
+PUEDE TENER MUCHAS TABLAS
+
+TABLESPACES
+===========
+Espacio virtual de almacenamiento de objetos de la base de datos.
+Se divide en segmentos
+TABLESPACES POR DEFECTO:
+	- USERS
+	- System
+	- SYSAUX
+Cada segmento almacena un segmento.
+
+Los segmento de usuario contienen:
+	- Datos (tablas)
+	- Índice
+	- LOB (Oracle Large Object)
+- Segmentos de Anulación
+- Segmentos temporales.
+
+===================================
+
+COMANDOS SQL
+============
+
+DDL (Data Definition Language)
+==============================
+	CREATE
+	ALTER
+	DROP
+	RENAME
+	TRUNCATE
+	COMMENT
+
+DML = DATA MANIPULATION LANGUAGE
+================================
+	SELECT
+	INSERT
+	UPDATE
+	DELETE
+	MERGE
+	CALL
+	EXPLAIN PLAN
+	LOCK TABLE
+
+DCL = DATA CONTROL Language (USUARIOS)
+===========================
+	GRANT
+	REVOKE
+
+TCL = TRANSACTION CONTROL Language
+==================================
+	COMMIT
+	ROLLBACK
+	SAVEPOINT
+	SET TRANSACTION
+
+
+
