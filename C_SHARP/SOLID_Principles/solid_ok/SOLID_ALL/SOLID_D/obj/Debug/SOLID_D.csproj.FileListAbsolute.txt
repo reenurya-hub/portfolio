@@ -1,0 +1,8 @@
+C:\Users\usuario\source\repos\SOLID_ALL\SOLID_D\obj\Debug\SOLID_D.csproj.AssemblyReference.cache
+C:\Users\usuario\source\repos\SOLID_ALL\SOLID_D\obj\Debug\SOLID_D.csproj.SuggestedBindingRedirects.cache
+C:\Users\usuario\source\repos\SOLID_ALL\SOLID_D\obj\Debug\SOLID_D.csproj.CoreCompileInputs.cache
+C:\Users\usuario\source\repos\SOLID_ALL\SOLID_D\bin\Debug\SOLID_D.exe.config
+C:\Users\usuario\source\repos\SOLID_ALL\SOLID_D\bin\Debug\SOLID_D.exe
+C:\Users\usuario\source\repos\SOLID_ALL\SOLID_D\bin\Debug\SOLID_D.pdb
+C:\Users\usuario\source\repos\SOLID_ALL\SOLID_D\obj\Debug\SOLID_D.exe
+C:\Users\usuario\source\repos\SOLID_ALL\SOLID_D\obj\Debug\SOLID_D.pdb

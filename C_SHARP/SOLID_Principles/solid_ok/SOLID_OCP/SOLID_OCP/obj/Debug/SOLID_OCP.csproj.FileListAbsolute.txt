@@ -1,0 +1,8 @@
+C:\Users\usuario\source\repos\SOLID_OCP\SOLID_OCP\bin\Debug\SOLID_OCP.exe.config
+C:\Users\usuario\source\repos\SOLID_OCP\SOLID_OCP\bin\Debug\SOLID_OCP.exe
+C:\Users\usuario\source\repos\SOLID_OCP\SOLID_OCP\bin\Debug\SOLID_OCP.pdb
+C:\Users\usuario\source\repos\SOLID_OCP\SOLID_OCP\obj\Debug\SOLID_OCP.csproj.AssemblyReference.cache
+C:\Users\usuario\source\repos\SOLID_OCP\SOLID_OCP\obj\Debug\SOLID_OCP.csproj.SuggestedBindingRedirects.cache
+C:\Users\usuario\source\repos\SOLID_OCP\SOLID_OCP\obj\Debug\SOLID_OCP.csproj.CoreCompileInputs.cache
+C:\Users\usuario\source\repos\SOLID_OCP\SOLID_OCP\obj\Debug\SOLID_OCP.exe
+C:\Users\usuario\source\repos\SOLID_OCP\SOLID_OCP\obj\Debug\SOLID_OCP.pdb
