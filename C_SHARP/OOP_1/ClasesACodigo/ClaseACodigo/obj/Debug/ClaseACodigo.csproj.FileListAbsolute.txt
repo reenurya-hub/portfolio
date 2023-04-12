@@ -1,0 +1,8 @@
+C:\Users\usuario\source\repos\ClasesACodigo\ClaseACodigo\bin\Debug\ClaseACodigo.exe.config
+C:\Users\usuario\source\repos\ClasesACodigo\ClaseACodigo\bin\Debug\ClaseACodigo.exe
+C:\Users\usuario\source\repos\ClasesACodigo\ClaseACodigo\bin\Debug\ClaseACodigo.pdb
+C:\Users\usuario\source\repos\ClasesACodigo\ClaseACodigo\obj\Debug\ClaseACodigo.csproj.AssemblyReference.cache
+C:\Users\usuario\source\repos\ClasesACodigo\ClaseACodigo\obj\Debug\ClaseACodigo.csproj.SuggestedBindingRedirects.cache
+C:\Users\usuario\source\repos\ClasesACodigo\ClaseACodigo\obj\Debug\ClaseACodigo.csproj.CoreCompileInputs.cache
+C:\Users\usuario\source\repos\ClasesACodigo\ClaseACodigo\obj\Debug\ClaseACodigo.exe
+C:\Users\usuario\source\repos\ClasesACodigo\ClaseACodigo\obj\Debug\ClaseACodigo.pdb
