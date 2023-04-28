@@ -1,0 +1,12 @@
+C:\Users\User\source\repos\MVCDesktop\Modelos\bin\Debug\Modelos.dll.config
+C:\Users\User\source\repos\MVCDesktop\Modelos\bin\Debug\Modelos.dll
+C:\Users\User\source\repos\MVCDesktop\Modelos\bin\Debug\Modelos.pdb
+C:\Users\User\source\repos\MVCDesktop\Modelos\bin\Debug\EntityFramework.dll
+C:\Users\User\source\repos\MVCDesktop\Modelos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\source\repos\MVCDesktop\Modelos\bin\Debug\EntityFramework.xml
+C:\Users\User\source\repos\MVCDesktop\Modelos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\source\repos\MVCDesktop\Modelos\obj\Debug\Modelos.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\MVCDesktop\Modelos\obj\Debug\Modelos.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\MVCDesktop\Modelos\obj\Debug\Modelos.csproj.CopyComplete
+C:\Users\User\source\repos\MVCDesktop\Modelos\obj\Debug\Modelos.dll
+C:\Users\User\source\repos\MVCDesktop\Modelos\obj\Debug\Modelos.pdb

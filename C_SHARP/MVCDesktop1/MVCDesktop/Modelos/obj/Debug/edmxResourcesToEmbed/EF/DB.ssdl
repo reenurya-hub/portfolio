@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="pruebaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'prueba.dbo.user' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" />
+    <Property Name="pass" Type="nvarchar" MaxLength="50" />
+    <Property Name="token_recovery" Type="nvarchar" MaxLength="50" />
+    <Property Name="date_created" Type="datetime" />
+  </EntityType>
+  <EntityContainer Name="pruebaModelStoreContainer">
+    <EntitySet Name="user" EntityType="Self.user" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [user].[id] AS [id], 
+    [user].[email] AS [email], 
+    [user].[pass] AS [pass], 
+    [user].[token_recovery] AS [token_recovery], 
+    [user].[date_created] AS [date_created]
+    FROM [dbo].[user] AS [user]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
