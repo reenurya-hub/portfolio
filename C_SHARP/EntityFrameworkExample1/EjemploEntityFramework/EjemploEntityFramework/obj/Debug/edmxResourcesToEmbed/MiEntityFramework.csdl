@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="prueba3Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="gente">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="edad" Type="Byte" />
+    <Property Name="idSexo" Type="Int32" />
+    <NavigationProperty Name="sexo" Relationship="Self.fk_idsexo" FromRole="gente" ToRole="sexo" />
+  </EntityType>
+  <EntityType Name="sexo">
+    <Key>
+      <PropertyRef Name="idSexo" />
+    </Key>
+    <Property Name="idSexo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="gente" Relationship="Self.fk_idsexo" FromRole="sexo" ToRole="gente" />
+  </EntityType>
+  <Association Name="fk_idsexo">
+    <End Role="sexo" Type="Self.sexo" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="gente" Type="Self.gente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sexo">
+        <PropertyRef Name="idSexo" />
+      </Principal>
+      <Dependent Role="gente">
+        <PropertyRef Name="idSexo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SampleEntityFramework" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="gente" EntityType="Self.gente" />
+    <EntitySet Name="sexo" EntityType="Self.sexo" />
+    <AssociationSet Name="fk_idsexo" Association="Self.fk_idsexo">
+      <End Role="sexo" EntitySet="sexo" />
+      <End Role="gente" EntitySet="gente" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
