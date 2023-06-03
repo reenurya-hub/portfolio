@@ -1,0 +1,4 @@
+PVERIFICA_LETRAS  B                    
+PVERIFICA_LETRAS  E   
+
+
