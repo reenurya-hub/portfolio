@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryMethodASPNet", "FactoryMethodASPNet\FactoryMethodASPNet.csproj", "{F33BA3F8-6A8C-4D7A-A07D-57D86F31E10C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tools", "Tools\Tools.csproj", "{83FE4849-E014-48DF-8545-14F000C64BFA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F33BA3F8-6A8C-4D7A-A07D-57D86F31E10C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F33BA3F8-6A8C-4D7A-A07D-57D86F31E10C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F33BA3F8-6A8C-4D7A-A07D-57D86F31E10C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F33BA3F8-6A8C-4D7A-A07D-57D86F31E10C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83FE4849-E014-48DF-8545-14F000C64BFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83FE4849-E014-48DF-8545-14F000C64BFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83FE4849-E014-48DF-8545-14F000C64BFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83FE4849-E014-48DF-8545-14F000C64BFA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AFB59634-0F3A-4D09-9002-0F91D849700D}
+	EndGlobalSection
+EndGlobal

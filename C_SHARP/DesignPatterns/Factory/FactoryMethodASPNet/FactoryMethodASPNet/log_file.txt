@@ -1,0 +1,7 @@
+Usuario entra a index. Fecha y hora: 29/05/2023 11:49:30 p. m.
+Usuario entra a index. Fecha y hora: 5/06/2023 4:08:41 p. m.
+Usuario entra a privacy. Fecha y hora: 5/06/2023 4:08:45 p. m.
+Usuario entra a index. Fecha y hora: 5/06/2023 4:08:46 p. m.
+Usuario entra a privacy. Fecha y hora: 5/06/2023 4:08:46 p. m.
+Usuario entra a index. Fecha y hora: 5/06/2023 4:18:02 p. m.
+Usuario entra a index. Fecha y hora: 5/06/2023 4:24:04 p. m.
