@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv=”Content-Type” content=”text/html; charset=UTF-8″ />
+
+    <title>Productos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+<h1>Productos</h1>
+<button onclick="startGame()" class="btn btn-secondary">Obtener descripcion</button><br><br>
+Ingresa producto: <input type="text" id="entradaId" name="entradaId">
+<div id="result"></div>
+<script>
+    function startGame() {
+        const idprod = document.getElementById('entradaId').value;
+        fetch('/productos/descripcion/'+idprod).then(response => {
+            if (!response.ok) {
+                throw new Error('Error al obtener la descripción del producto');
+            }
+            return response.text();
+        })
+            .then(data => {
+                console.log('Descripción del producto:', data);
+                alert(data);
+                document.getElementById('result').innerText = data;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
+</script>
+</body>
+</html>
