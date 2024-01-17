@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<p th:text="|Zoológico del Bronx|" />
+<table>
+    <th:block th:each="a: ${animal}">
+        <tr>
+            <td th:text="${a.idanimal}">...</td>
+            <td th:text="${a.tipo}">...</td>
+            <td th:text="${a.nombre}">...</td>
+            <td th:text="${a.edad}">...</td>
+        </tr>
+    </th:block>
+</table>
+
+</body>
+</html>
