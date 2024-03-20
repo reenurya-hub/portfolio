@@ -1,0 +1,8 @@
+SEQFILE3_1.cbl  = Ingresa los articulos al inventario por primera vez
+RDSECFIL.CBL    = Lee el inventario total y lo muestra en pantalla.
+APDSQFL.cbl     = Ingresa un nuevo articulo al archivo de inventarios
+                  ya creado.
+SRRGFIL.cbl     = Busca en el archivo secuencial de invetario por el 
+                  codigo de articulo y devuelve los valores del registro.
+SVRGSQF.cbl     = Busca el registro y lo guarda en un archivo diferente
+SQNXTREG        = Busca el siguiente registro después del indicado.
